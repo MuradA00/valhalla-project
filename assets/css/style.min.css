@@ -2139,7 +2139,7 @@ body {
 .header__info small {
     font-size: max(.75em, 18px);
     line-height: 1em;
-    color: #fefdfc;
+    color: #fefdfc; 
 }
 
 .header__info h2 {
