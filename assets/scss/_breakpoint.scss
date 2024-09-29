@@ -1,0 +1,59 @@
+@mixin breakpoint($size) {
+    @media (max-width: ($size)) {
+        @content;
+    }
+}
+
+@mixin breakpoint-2560 {
+    @include breakpoint(2560px) {
+        @content;
+    }
+}
+
+@mixin breakpoint-1920 {
+    @include breakpoint(1920px) {
+        @content;
+    }
+}
+
+@mixin breakpoint-1680 {
+    @include breakpoint(1680px) {
+        @content;
+    }
+}
+
+@mixin breakpoint-1460 {
+    @include breakpoint(1460px) {
+        @content;
+    }
+}
+
+@mixin breakpoint-1240 {
+    @include breakpoint(1240px) {
+        @content;
+    }
+}
+
+@mixin breakpoint-1024 {
+    @include breakpoint(1024px) {
+        @content;
+    }
+}
+
+@mixin breakpoint-760 {
+    @include breakpoint(760px) {
+        @content;
+    }
+}
+
+@mixin breakpoint-640 {
+    @include breakpoint(640px) {
+        @content;
+    }
+}
+
+@mixin breakpoint-480 {
+    @include breakpoint(480px) {
+        @content;
+    }
+}

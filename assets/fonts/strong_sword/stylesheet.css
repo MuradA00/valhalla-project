@@ -1,0 +1,6 @@
+@font-face {
+    font-family: 'Strong Sword';
+    src: url('web_pearl_original.woff2') format('woff2'), url('web_pearl_original.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}

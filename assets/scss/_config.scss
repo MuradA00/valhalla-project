@@ -1,0 +1,45 @@
+//------------------------------------------------------------------------------------------ //
+// Configs
+//------------------------------------------------------------------------------------------ //
+
+:root {
+    --font-primary: 'Angelus Medieval';
+    --font-secondary: 'Strong Sword';
+
+    --color-primary: #e89f78;
+    --color-secondary: #f9f1e9;
+
+    --font-color-primary: #e89f78;
+    --font-color-secondary: #f9f1e9;
+
+    --gradient-primary: linear-gradient(to bottom, #eaa37b, #dc885d);
+    --gradient-secondary: linear-gradient(to bottom, #fbf4ee 0%, #c9b8aa 100%);
+    --gradient-hardcore: linear-gradient(to bottom, #f0c8ff, #de84ff);
+    --gradient-comfort: linear-gradient(to bottom, #d8f8fc 0%, #00c3ff 100%);
+
+    --page-gap-x: 160px;
+    --page-nav-height: 90px;
+
+    @include breakpoint-1920 {
+        --page-gap-x: 140px;
+        --page-nav-height: 80px;
+    }
+
+    @include breakpoint-1680 {
+        --page-gap-x: 120px;
+    }
+
+    @include breakpoint-1460 {
+        --page-gap-x: 100px;
+    }
+
+    @include breakpoint-1240 {
+        --page-gap-x: 80px;
+    }
+
+    @include breakpoint-1024 {
+        --page-gap-x: 46px;
+        --page-nav-height: 70px;
+    }
+}
+

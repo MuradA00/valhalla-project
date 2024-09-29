@@ -1,0 +1,30 @@
+@mixin font($font_family: null, $font_weight: null, $font_size: null, $line_height: null, $color: null, $line-count: 0) {
+    font-family: $font_family;
+    font-weight: $font_weight;
+    font-size: $font_size;
+    line-height: $line_height;
+    color: $color;
+
+    @include trim_lines($line_height, $line-count);
+}
+
+@mixin trim_lines($line-height, $line-count) {
+    @if $line-count == 1 {
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        max-height: unset;
+        display: inline-block;
+        -webkit-line-clamp: unset;
+        -webkit-box-orient: unset;
+    }
+    @else if $line-count > 1 {
+        overflow: hidden;
+        max-height: calc(#{$line-height} * #{$line-count});
+        display: -webkit-box;
+        -webkit-line-clamp: $line-count;
+        -webkit-box-orient: vertical;
+        white-space: unset;
+        text-overflow: unset;
+    }
+}
