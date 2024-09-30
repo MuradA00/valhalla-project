@@ -1867,7 +1867,7 @@ body {
 }
 
 .header {
-    --y-offset: 54px;
+    --y-offset: 84px;
     width: 100%;
     min-height: 100dvh;
     position: relative;
@@ -1877,6 +1877,15 @@ body {
     padding: calc(var(--y-offset) + var(--page-nav-height)) 0 var(--y-offset);
     display: flex;
     justify-content: center;
+}
+
+.header-versus {
+    transform: skew(-15deg);
+}
+
+.header-gifts {
+    color: #fff !important;
+    font-size: 14px !important;
 }
 
 .header-divider {
@@ -1965,11 +1974,17 @@ body {
 }
 
 .header-center {
-    padding: 1em 0;
+    padding: 16px 0;
     display: flex;
     flex-direction: column;
-    grid-gap: 24px;
+    grid-gap: 20px;
     position: relative;
+}
+
+@media (min-height: 1100px) {
+    .header {
+        min-height: 800px;
+    }
 }
 
 .header-center > *:not(img) {
@@ -2019,7 +2034,7 @@ body {
 }
 
 .header__logos-item {
-    max-width: clamp(140px, 20vw, 320px);
+    max-width: clamp(140px, 17.75vw, 284px);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -2143,7 +2158,7 @@ body {
 }
 
 .header__info h2 {
-    font-size: 1em;
+    font-size: .95em;
     line-height: 1.2em
 }
 
@@ -2335,6 +2350,68 @@ body {
         height: auto;
         min-height: auto
     }
+}
+.form-dropdown {
+    min-width: clamp(120px, 8.75vw, 140px);
+    position: relative;
+    z-index: 1;
+}
+.form-dropdown--active .form-dropdown__arrow {
+    transform: scaleY(-1);
+}
+.form-dropdown__inner {
+    display: flex;
+    cursor: pointer;
+    min-height: clamp(54px, 5.25vw, 82px);
+    border-radius: 4px;
+    border: 2px solid #55627a;
+    padding: 0 14px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgba(9,15,27,0.35);
+}
+
+.form-inputs__item {
+    display: flex;
+    align-items: center;
+    grid-gap: clamp(12px, 1.25vw, 20px);
+}
+.form-dropdown__arrow img {
+    display: block;
+}
+.form-dropdown__list {
+    list-style: none;
+    position: absolute;
+    width: 100%;
+    top: calc(100% + 12px);
+    border: 2px solid #55627a;
+    border-radius: 4px;
+    left: 0;
+    background-color: rgba(9,15,27,0.35);
+    backdrop-filter: blur(12px);
+    transform: translateY(6px);
+    transition: all 300ms ease;
+    opacity: 0;
+    pointer-events: none;
+}
+.form-dropdown__list--active {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: all;
+}
+.form-dropdown__item {
+    font-size: clamp(14px, 1vw, 16px);
+    padding: 0 20px;
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 300ms ease;
+}
+.form-dropdown__item:hover {
+    background-color: rgba(255,255,255,.1);
 }
 
 .servers__item.hardcore {
@@ -3491,13 +3568,25 @@ body {
 
 .task-col {
     background-image: var(--gradient);
-    min-height: 520px;
+    min-height: 550px;
     display: flex;
     flex-direction: column;
     align-items: var(--align);
     justify-content: space-between;
-    padding: 60px 32px 44px 32px;
-    grid-gap: 16px;
+    padding: 40px 32px 44px 26px;
+    grid-gap: 24px;
+}
+
+.task-step {
+    width: clamp(64px, 7.5vw, 120px);
+    aspect-ratio: 1;
+    scale: 2;
+}
+
+.task-step img {
+    display: block;
+    max-width: 100%;
+    object-fit: cover;
 }
 
 .task-col > * {
@@ -3539,7 +3628,23 @@ body {
     --gradient-align: right;
     --btn-align: flex-start;
     --align: flex-end;
-    --gradient: linear-gradient(to var(--gradient-align), #13426d, transparent)
+    --gradient: linear-gradient(to var(--gradient-align), #13426d, transparent);
+
+    height: fit-content;
+}
+
+.content {
+    display: none !important;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    flex: 1;
+    grid-gap: 24px;
+}
+
+.content--selected {
+    display: flex !important;
+    animation: fade-up-content 800ms ease forwards;
 }
 
 .task-col--red {
@@ -3548,13 +3653,6 @@ body {
     --align: flex-start;
     --gradient: linear-gradient(to var(--gradient-align), #602a21, transparent);
 }
-
-.registration-content--tasks {
-    width: 100%;
-    max-width: calc(100% - 10rem);
-    margin: 0 auto;
-}
-
 
 .registration-container {
     padding: 0 16px;
@@ -3591,15 +3689,10 @@ body {
     transition: opacity 300ms ease;
 }
 
-.registration-content--selected {
-    display: block !important;
-    animation: fade-up-content 800ms ease forwards;
-}
-
 @keyframes fade-up-content {
     from {
         opacity: 0;
-        transform: translateY(-20px);
+        transform: translateX(-20px);
     }
     to {
         opacity: 1;
@@ -3634,7 +3727,7 @@ body {
 .registration-main {
     display: flex;
     flex-direction: column;
-    grid-gap: clamp(24px, 3vw, 48px);
+    grid-gap: clamp(40px, 5.25vw, 84px);
 }
 
 .registration-promo__heading {
@@ -3680,6 +3773,10 @@ body {
     display: flex;
     flex-direction: column;
     gap: clamp(20px, 1.75vw, 28px);
+}
+
+.form-dropdown__selected  {
+    font-size: clamp(14px, 1.125vw, 18px);
 }
 
 .form-inputs {
@@ -3784,9 +3881,27 @@ body {
     color: #fff;
 }
 
+
 .task {
     display: grid;
+    align-items: center;
     grid-template-columns: repeat(2, 50%);
+    width: 100%;
+    max-width: 1540px;
+    margin: 0 auto;
+}
+
+@media (min-width: 2100px) {
+    .task {
+        max-width: 1740px;
+    }
+}
+
+.task-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    grid-gap: 1em;
 }
 
 button {
@@ -3825,7 +3940,7 @@ button {
     }
     .task-col {
         min-height: 400px;
-        padding: 32px 16px;
+        padding: 24px 16px;
     }
     .registration-content--tasks {
         max-width: 100%;
@@ -3839,6 +3954,12 @@ button {
 }
 
 @media (max-width: 740px) {
+    .task-header {
+        flex-direction: column;
+    }
+    .task-col--red .task-header {
+        flex-direction: column-reverse;
+    }
     .registration-controls {
         display: flex;
         grid-gap: 12px;
@@ -3851,6 +3972,16 @@ button {
     .task {
         display: flex;
         flex-direction: column;
+    }
+    .form-button {
+        padding: 0 24px;
+        height: 48px !important;
+        max-width: 258px;
+        min-height: 48px !important;
+        font-size: 15px !important;
+    }
+    .form-button span {
+        font-size: 15px !important;
     }
     .task-col {
         --btn-align: center;
@@ -3902,6 +4033,13 @@ button {
 }
 
 @media(max-width: 1024px) {
+    .task {
+        max-width: 100%;
+        align-items: stretch;
+    }
+    .task-col {
+        height: 100%;
+    }
     .bonuses__item {
         width: calc((100% - 30px)/2)
     }

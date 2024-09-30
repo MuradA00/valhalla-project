@@ -234,17 +234,6 @@
         <!-- header -->
         <header class="header" data-section-id="0">
             <div class="header-container container">
-                <div class="header-themes">
-                    <span class="header-themes__col header-themes__col--light">
-                        Light
-                    </span>
-                    <span class="header-themes__middle">
-                        vs
-                    </span>
-                    <span class="header-themes__col header-themes__col--dark">
-                        dark
-                    </span>
-                </div>
                 <div class="header__content">
                     <div class="header__logos">
                         <a href="/" class="header__logos-item">
@@ -263,25 +252,28 @@
                             src="assets/images/bg/bg_header-rectangle.png" alt="rectangle"
                         >
                         <div class="header__title">
-                            <small class="text-gradient">Противостояние двух сообществ</small>
-                            <h1 class="text-gradient">LINEGAGE 2 <span class="text-gradient">ESSENCE</span></h1>
+                            <small class="text-gradient"> главное противостояние ESSENCE 2024</small>
+                            <h1 class="text-gradient">
+                                 Dark
+                                <span class="header-versus text-gradient text-gradient--primary">VS</span> 
+                                Light
+                            </h1>
                         </div>
                         <div class="header__info">
-                            <small>Открытие</small>
+                            <small>обеденение серверов</small>
                             <h2 class="text-gradient text-gradient--primary">
-                                25 МАРТА В 20:00
+                                9 октября В 20:00
                             </h2>
-                            <span>Запуск ОБТ 9 августа 20:00</span>
                         </div>
                     </div>
                     <div class="header__button">
-                        <a href="/" class="btn btn--primary header__button-item" data-popup-open="subscribe">
+                        <a href="#registration-section" class="btn btn--primary header__button-item">
                             <div class="header__button-item-icon">
-                                <img src="assets/images/buttons/icon.png" alt="">
+                                <img src="assets/images/buttons/icon.png" alt="image">
                             </div>
                             <span>Забрать награду</span>
                         </a>
-                        <small>Подарков выдано: 24/5000</small>
+                        <small class="header-gifts">Подарков выдано: 24/5000</small>
                     </div>
                 </div>
             </div>
@@ -788,6 +780,7 @@
 
         <!-- registration -->
         <section 
+            id="registration-section"
             data-section-id="7"
             class="registration" 
             style="background-image: url('assets/images/bg/bonuse_bg.jpg');"
@@ -810,86 +803,91 @@
                             <button class="registration-controls__button btn">
                                 уже есть аккаунт
                             </button>
-                        </div>
-                        <div class="registration-promo">
-                            <span class="registration-promo__heading text-gradient">
-                                получи бонус за участие
-                            </span>
-                            <span class="registration-promo__subheading">
-                                Выполни задание и получи бонус!
-                            </span>
-                        </div>                        
+                        </div>                     
                     </div>
-                    <div class="registration-content registration-content--form registration-content--selected"> 
-                        <form class="form">
-                            <ul class="bonuses-grid bonuses-grid--registration">
-                                <li class="bonuses-grid__item">
-                                    <img src="assets/images/bonuses/bonuse-case-image.png" alt="image">
-                                </li>
-                                <li class="bonuses-grid__item">
-                                    <img src="assets/images/bonuses/bonuse-meditation-image.png" alt="image">
-                                </li>
-                                <li class="bonuses-grid__item">
-                                    <img src="assets/images/bonuses/bonuse-vessel-image.png" alt="image">
-                                </li>
-                                <li class="bonuses-grid__item">
-                                    <img src="assets/images/bonuses/bonuse-vessel-image-2.png" alt="image">
-                                </li>
-                                <li class="bonuses-grid__item">
-                                    <img src="assets/images/bonuses/bonuse-book-image.png" alt="image">
-                                </li>
-                                <li class="bonuses-grid__item">
-                                    <img src="assets/images/bonuses/bonuse-acc-image.png" alt="image">
-                                </li>
-                            </ul>
-                            <ul class="form-inputs">
-                                <li class="form-inputs__item">
-                                    <input 
-                                        class="form-field" 
-                                        type="text" 
-                                        placeholder="Почта"
-                                    >
-                                </li>
-                                <li class="form-inputs__item">
-                                    <input 
-                                        class="form-field" 
-                                        type="text" 
-                                        placeholder="Пароль"
-                                    >
-                                </li>
-                                <li class="form-inputs__item">
-                                    <input 
-                                        class="form-field" 
-                                        type="text" 
-                                        placeholder="Повторите пароль"
-                                    >
-                                </li>
-                            </ul>
-                            <div class="form-accept">
-                                <label class="form-accept__checkbox">
-                                    <input type="checkbox" name="form-checkbox">
-                                    <span></span>
-                                </label>
-                                <span class="form-accept__text">
-                                    Я согласен на получение бонусных промокодов и полезной информации про сервер
+                    <div class="task">
+                        <div class="task-col task-col--red">
+                            <form class="form content content--form content--selected">
+                                <span class="registration-promo__heading text-gradient">
+                                    создать мастер аккаунт
                                 </span>
-                            </div>
-                            <button class="form-button btn btn--primary">
-                                <span>Создать аккаунт</span>
-                            </button>
-                        </form>
-                    </div>
-                    <div class="registration-content registration-content--tasks">
-                        <div class="task">
-                            <div class="task-col task-col--red">
-                                <div class="task-header">
-                                    <div class="task-title">
-                                        Напиши почту аккаунта и 
-                                        подверди участие
-                                    </div>
-                                    <span class="task-description">
-                                        Отправить файлы с промокодом перед ОБТ
+                                <ul class="form-inputs">
+                                    <li class="form-inputs__item">
+                                        <div class="form-dropdown">
+                                            <div class="form-dropdown__inner">
+                                                <span class="form-dropdown__selected">
+                                                    FOO
+                                                </span>
+                                                <div class="form-dropdown__arrow">
+                                                    <img src="assets/images/langs/arrow.png" alt="arrow">
+                                                </div>
+                                            </div>
+                                            <ul class="form-dropdown__list">
+                                                <li class="form-dropdown__item">
+                                                    Not FOO 1
+                                                </li>
+                                                <li class="form-dropdown__item">
+                                                    Not FOO 2
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <input 
+                                            class="form-field" 
+                                            placeholder="Логин" 
+                                            type="text"
+                                        >
+                                    </li>
+                                    <li class="form-inputs__item">
+                                        <input 
+                                            class="form-field" 
+                                            type="text" 
+                                            placeholder="Почта"
+                                        >
+                                    </li>
+                                    <li class="form-inputs__item">
+                                        <input 
+                                            class="form-field" 
+                                            type="text" 
+                                            placeholder="Пароль"
+                                        >
+                                    </li>
+                                    <li class="form-inputs__item">
+                                        <input 
+                                            class="form-field" 
+                                            type="text" 
+                                            placeholder="Повторите пароль"
+                                        >
+                                    </li>
+                                </ul>
+                                <div class="form-accept">
+                                    <label class="form-accept__checkbox">
+                                        <input type="checkbox" name="form-checkbox">
+                                        <span></span>
+                                    </label>
+                                    <span class="form-accept__text">
+                                        Я согласен на получение бонусных промокодов и полезной информации про сервер
                                     </span>
+                                </div>
+                                <button class="form-button btn btn--primary">
+                                    <span>Создать аккаунт</span>
+                                </button>
+                            </form>
+                            <div class="content content--task">
+                                <div class="task-header">
+                                    <div class="task-header__item task-header__item--сol">
+                                        <div class="task-title">
+                                            Напиши почту аккаунта и <br>
+                                            <span class="text-gradient">подтверди участие</span>
+                                        </div>
+                                        <span class="task-description">
+                                            Отправить файлы с промокодом перед ОБТ
+                                        </span>
+                                    </div>
+                                    <div class="task-header__item">
+                                        <div class="task-step">
+                                            <img src="assets/images/icons/1-step.png" alt="">
+                                        </div>
+                                    </div>
                                 </div>
                                 <div class="task-field">
                                     <input 
@@ -912,39 +910,49 @@
                                         <img src="assets/images/buttons/icon.png" alt="">
                                     </div>
                                     <span>Забрать награду</span>
-                                </a>
+                                </a>                                
                             </div>
-                            <div class="task-col task-col--blue">
-                                <div class="task-header">
-                                    <div class="task-title">
-                                        Выполни социальное
-                                        задание
+                        </div>
+                        <div class="task-col task-col--blue">
+                            <div class="task-header">
+                                <div class="task-header__item">
+                                    <div class="task-step">
+                                        <img src="assets/images/icons/2-step.png" alt="">
                                     </div>
                                 </div>
-                                <ul class="bonuses-grid bonuses-grid--form">
-                                    <li class="bonuses-grid__item">
-                                        <img src="assets/images/bonuses/bonuse-case-image.png" alt="image">
-                                    </li>
-                                    <li class="bonuses-grid__item">
-                                        <img src="assets/images/bonuses/bonuse-meditation-image.png" alt="image">
-                                    </li>
-                                    <li class="bonuses-grid__item">
-                                        <img src="assets/images/bonuses/bonuse-vessel-image.png" alt="image">
-                                    </li>
-                                    <li class="bonuses-grid__item">
-                                        <img src="assets/images/bonuses/bonuse-vessel-image-2.png" alt="image">
-                                    </li>
-                                    <li class="bonuses-grid__item">
-                                        <img src="assets/images/bonuses/bonuse-book-image.png" alt="image">
-                                    </li>
-                                    <li class="bonuses-grid__item">
-                                        <img src="assets/images/bonuses/bonuse-acc-image.png" alt="image">
-                                    </li>
-                                </ul>
-                                <a href="/" class="task-btn btn btn--primary header__button-item task-btn--tg" data-popup-open="subscribe">
-                                    <span>Перейти в Telegram</span>
-                                </a>
+                                <div class="task-header__item">
+                                    <div class="task-title">
+                                        Выполни социальное
+                                        <span class="text-gradient">задание</span>
+                                    </div>
+                                    <span class="task-description">
+                                        Делай контент по нашей любимой игре и получай приятные бонусы
+                                    </span>
+                                </div>
                             </div>
+                            <ul class="bonuses-grid bonuses-grid--form">
+                                <li class="bonuses-grid__item">
+                                    <img src="assets/images/bonuses/bonuse-case-image.png" alt="image">
+                                </li>
+                                <li class="bonuses-grid__item">
+                                    <img src="assets/images/bonuses/bonuse-meditation-image.png" alt="image">
+                                </li>
+                                <li class="bonuses-grid__item">
+                                    <img src="assets/images/bonuses/bonuse-vessel-image.png" alt="image">
+                                </li>
+                                <li class="bonuses-grid__item">
+                                    <img src="assets/images/bonuses/bonuse-vessel-image-2.png" alt="image">
+                                </li>
+                                <li class="bonuses-grid__item">
+                                    <img src="assets/images/bonuses/bonuse-book-image.png" alt="image">
+                                </li>
+                                <li class="bonuses-grid__item">
+                                    <img src="assets/images/bonuses/bonuse-acc-image.png" alt="image">
+                                </li>
+                            </ul>
+                            <a href="/" class="task-btn btn btn--primary header__button-item task-btn--tg" data-popup-open="subscribe">
+                                <span>Перейти в Telegram</span>
+                            </a>
                         </div>
                     </div>
                 </div>

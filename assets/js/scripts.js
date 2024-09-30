@@ -4,12 +4,40 @@ $(document).ready(function(){
     // Links
     //------------------------------------------------------------------------------------------ //
 
-    const registrationContents = document.querySelectorAll('.registration-content');
-    const registrationContentActiveClass = "registration-content--selected";
+    const registrationContents = document.querySelectorAll('.content');
+    const registrationContentActiveClass = "content--selected";
     const registrationControlsButtons = document.querySelectorAll('.registration-controls__button');
     const registrationControlsButtonActiveClass = 'registration-controls__button--selected'; 
     const registrationGridItems = document.querySelectorAll('.bonuses-grid--registration .bonuses-grid__item');
     const formGridItems = document.querySelectorAll('.bonuses-grid--form .bonuses-grid__item');
+    const formDropdown = document.querySelector('.form-dropdown__inner');
+    const formDropdownList = document.querySelector('.form-dropdown__list');
+    const formDropdownItems = document.querySelectorAll('.form-dropdown__item');
+    let formDropdownSelectedItem = document.querySelector('.form-dropdown__selected');
+
+    if (formDropdown && formDropdownList) {
+        const activeClass = 'form-dropdown__inner--active';
+        const activeListClass = 'form-dropdown__list--active';
+
+        formDropdown.addEventListener('click', (e) => {
+            const wrapper = e.target;
+            wrapper.classList.toggle(activeClass);
+            if (wrapper.classList.contains(activeClass)) {
+                formDropdownList.classList.add(activeListClass)
+            } else {
+                formDropdownList.classList.remove(activeListClass);
+            }
+        })
+        formDropdownItems.forEach((item) => {
+            item.addEventListener('click', (e) => {
+                const itemContent = e.target.textContent;
+                formDropdownList.classList.remove(activeListClass);
+                if (itemContent !== formDropdownSelectedItem.textContent) {
+                    formDropdownSelectedItem.textContent = itemContent;
+                }
+            })
+        })
+    }
 
     const handleBonusItemOpacity = (items) => {
         items.forEach((gridItem, i) => gridItem.style.opacity = `${1 - i * 0.08}`)
