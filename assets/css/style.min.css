@@ -3906,8 +3906,40 @@ body {
 }
 
 @media (min-width: 2100px) {
+    .header__logos {
+        grid-gap: 60px !important;
+    }
+    .header-divider {
+        max-width: 940px;
+    }
+    .header__logos-item {
+        max-width: 440px;
+    }
+    .header__title small {
+        font-size: 32px;
+    }
+    .header-center {
+        grid-gap: 54px;
+        padding: 28px 0;
+    }
+    .servers {
+        padding-top: 0 !important;
+    }
+    .header-gifts {
+        font-size: 24px !important;
+    }
+    .header__title h1 {
+        font-size: 64px;
+    }
+    .header__info small {
+        font-size: 38px;
+    }
+    .header__info h2 {
+        font-size: 44px;
+    }
     .header {
-        min-height: 1100px;
+        min-height: 100dvh;
+        padding-top: 280px;
     }
     .servers .section__bg {
         top: -200px;
@@ -4817,7 +4849,7 @@ button {
 
 @media (min-width: 2200px) {
     .header-rectangle {
-        max-width: 1200px !important;
+        max-width: 1400px !important;
     }
 }
 
