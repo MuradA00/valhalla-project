@@ -1871,8 +1871,8 @@ body {
 }
 
 .header {
-    --y-offset: 84px;
-    min-height: 800px;
+    --y-offset: 120px;
+    min-height: 100vh;
     width: 100%;
     position: relative;
     background: url("../images/bg/bg_header.webp") top center;
@@ -1882,6 +1882,10 @@ body {
     padding-bottom: calc(var(--y-offset) / 2); 
     display: flex;
     justify-content: center;
+}
+
+.servers {
+    padding-top: 60px;
 }
 
 .header-versus {
