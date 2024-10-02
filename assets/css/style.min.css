@@ -3926,9 +3926,6 @@ body {
         grid-gap: 54px;
         padding: 28px 0;
     }
-    .servers {
-        padding-top: 0 !important;
-    }
     .header-gifts {
         font-size: 24px !important;
     }
